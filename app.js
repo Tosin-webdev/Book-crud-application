@@ -12,6 +12,10 @@ app.get('/add-user', (req, res)=>{
     res.render("add-user")
 })
 
+app.get('/update-user', (req, res)=>{
+    res.render("update-user")
+})
+
 //  register view engine
 app.set('view engine', 'ejs')
 
