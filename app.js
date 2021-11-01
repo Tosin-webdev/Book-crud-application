@@ -7,6 +7,11 @@ app.get('/',(req, res) =>{
     res.render("index")
 })
 
+
+app.get('/add-user', (req, res)=>{
+    res.render("add-user")
+})
+
 //  register view engine
 app.set('view engine', 'ejs')
 
