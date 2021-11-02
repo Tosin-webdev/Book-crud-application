@@ -18,15 +18,15 @@ exports.adduser = (req, res) => {
 };
 
 exports.updateuser = (req, res) => {
-  // axios
-  //   .get("http://localhost:3000/api/users", {
-  //     params: { id: req.query.id },
-  //   })
-  //   .then((userdata) => {
-  //     res.render("update-user", { user: userdata.data });
-  //   })
-  //   .catch((err) => {
-  //     res.send(err);
-  //   });
+  axios
+    .get("http://localhost:3000/api/users", {
+      params: { id: req.query.id },
+    })
+    .then((userdata) => {
+      res.render("update-user", { user: userdata.data });
+    })
+    .catch((err) => {
+      res.send(err);
+    });
   res.render("update-user");
 };
