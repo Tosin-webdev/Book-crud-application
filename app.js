@@ -1,32 +1,26 @@
 let express = require("express");
+const dotenv = require("dotenv");
 let app = express();
 const connectDB = require("./database/connection");
 
 const port = 3000;
 
-// A get request for the home page
-app.get("/", (req, res) => {
-  res.render("index");
-});
+dotenv.config({ path: ".env" });
 
-// A get request for the about page
-app.get("/add-user", (req, res) => {
-  res.render("add-user");
-});
+// mongoDB connection
+connectDB();
 
-// A get request for the update user
-app.get("/update-user", (req, res) => {
-  res.render("update-user");
-});
+// load routes
+app.use("/", require("./routes/user.routes"));
+
+// parse request
+app.use(express.urlencoded({ extended: false }));
 
 //  register view engine
 app.set("view engine", "ejs");
 
 // view public folder(css)
 app.use(express.static("public"));
-
-// mongoDB connection
-connectDB();
 
 app.listen(port, () => {
   console.log(`app listening at http://localhost:${port}`);
