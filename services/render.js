@@ -5,7 +5,7 @@ exports.homeRoutes = (req, res) => {
   axios
     .get("http://localhost:3000/api/users")
     .then((response) => {
-      console.log(response.data);
+      // console.log(response.data);
       res.render("index", { users: response.data });
     })
     .catch((err) => {
@@ -23,6 +23,7 @@ exports.updateuser = (req, res) => {
       params: { id: req.query.id },
     })
     .then((userdata) => {
+      console.log(userdata.data);
       res.render("update_user", { user: userdata.data });
     })
     .catch((err) => {
