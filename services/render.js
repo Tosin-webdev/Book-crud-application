@@ -14,7 +14,7 @@ exports.homeRoutes = (req, res) => {
 };
 
 exports.adduser = (req, res) => {
-  res.render("add-user");
+  res.render("add_user");
 };
 
 exports.updateuser = (req, res) => {
@@ -23,10 +23,10 @@ exports.updateuser = (req, res) => {
       params: { id: req.query.id },
     })
     .then((userdata) => {
-      res.render("update-user", { user: userdata.data });
+      res.render("update_user", { user: userdata.data });
     })
     .catch((err) => {
       res.send(err);
     });
-  res.render("update-user");
+  // res.render("update-user");
 };
