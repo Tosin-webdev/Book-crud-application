@@ -8,10 +8,10 @@ const controller = require("../controller/user.controller");
 route.get("/", services.homeRoutes);
 
 // A get request for the about page
-route.get("/add-user", services.adduser);
+route.get("/add_user", services.adduser);
 
 // A get request for the update user
-route.get("/update-user", services.updateuser);
+route.get("/update_user", services.updateuser);
 
 // APIs
 route.post("/api/users", controller.create);
