@@ -4,7 +4,7 @@ const morgan = require("morgan");
 let app = express();
 const connectDB = require("./database/connection");
 
-const port = 3000;
+const port = 3000 || process.env.port;
 
 dotenv.config({ path: ".env" });
 
