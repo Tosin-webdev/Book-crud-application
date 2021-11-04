@@ -6,6 +6,7 @@ const connectDB = require("./database/connection");
 
 const port = 3000 || process.env.port;
 
+// env file
 dotenv.config({ path: ".env" });
 
 // mongoDB connection
