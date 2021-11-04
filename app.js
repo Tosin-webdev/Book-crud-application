@@ -4,7 +4,7 @@ const morgan = require("morgan");
 let app = express();
 const connectDB = require("./database/connection");
 
-const port = 3000 || process.env.port;
+const PORT = 3000 || process.env.PORT;
 
 // env file
 dotenv.config({ path: ".env" });
@@ -24,6 +24,6 @@ app.use(express.static("public"));
 // load routes
 app.use("/", require("./routes/user.routes"));
 
-app.listen(port, () => {
+app.listen(PORT, () => {
   console.log(`app listening at http://localhost:${port}`);
 });
