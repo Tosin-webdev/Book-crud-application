@@ -2,6 +2,9 @@
   "name": "book-crud-app",
   "version": "1.0.0",
   "main": "app.js",
+   "engines": {
+    "node": "12.11.1"
+  },
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js"
@@ -20,8 +23,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
-  "engines": {
-    "node": "12.11.1"
-  }
+  "description": ""
+ 
 }
