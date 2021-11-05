@@ -29,5 +29,4 @@ exports.updateuser = (req, res) => {
     .catch((err) => {
       res.send(err);
     });
-  // res.render("update-user");
 };
