@@ -1,3 +1,4 @@
+// require user model
 var Userdb = require("../model/user");
 
 // create and save new user
