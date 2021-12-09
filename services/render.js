@@ -1,5 +1,6 @@
 const axios = require("axios");
 
+// displays home page
 exports.homeRoutes = (req, res) => {
   // Make a get request to /api/users
   axios
@@ -13,11 +14,12 @@ exports.homeRoutes = (req, res) => {
     });
 };
 
-// display add_user page
+// display add user page
 exports.adduser = (req, res) => {
   res.render("add_user");
 };
 
+// displays update user page
 exports.updateuser = (req, res) => {
   axios
     .get("http://localhost:3000/api/users", {
