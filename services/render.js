@@ -13,6 +13,7 @@ exports.homeRoutes = (req, res) => {
     });
 };
 
+// display add_user page
 exports.adduser = (req, res) => {
   res.render("add_user");
 };
