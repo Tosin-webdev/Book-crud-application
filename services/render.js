@@ -1,3 +1,4 @@
+// require mongoose module
 const axios = require("axios");
 
 // displays home page
