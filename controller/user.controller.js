@@ -21,7 +21,6 @@ exports.create = (req, res) => {
     .save(user)
     .then((data) => {
       //   res.send(data);
-      //   console.log(data);
       res.redirect("/add_user");
     })
     .catch((err) => {
