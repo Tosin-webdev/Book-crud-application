@@ -4,6 +4,7 @@ const morgan = require("morgan");
 let app = express();
 const connectDB = require("./database/connection");
 
+// setting the port to use
 const PORT = process.env.PORT || 3000;
 
 // env file
