@@ -92,7 +92,7 @@ exports.delete = (req, res) => {
       if (!data) {
         res
           .status(404)
-          .send({ mesage: `Canot delete with id ${id}. maybe id is wrong` });
+          .send({ mesage: `Cannot delete with id ${id}. maybe id is wrong` });
       } else {
         res.send({
           message: "User was deleted successfully",
